@@ -4,7 +4,7 @@ import Foundation
 
 let localFileManager = FileManager()
 let sortingPath = "/Users/castle/Downloads"
-let arrayOfFiles = localFileManager.subpaths(atPath: sortingPath)
+let arrayOfFiles = try? localFileManager.contentsOfDirectory(atPath: sortingPath)
 
 // Func checks if directory with given name exists
 func dirExistenceCheck(in path: [String]?, withName name: String) -> Bool {
@@ -14,11 +14,12 @@ func dirExistenceCheck(in path: [String]?, withName name: String) -> Bool {
 /* Func moves a file to a directory
 Returns true if no error occured
 Returns false if catches an error */
-func movingFile(to dirPath: String, file: String, fileManager: FileManager) -> Bool{
+func movingFile(to dirPath: String, file: String, fileManager: FileManager) -> Bool {
 	do {
 		try fileManager.moveItem(atPath: file, toPath: dirPath)
 		return true
-	} catch {
+	} catch let error {
+		dump(error)
 		return false
 	}
 }
@@ -30,7 +31,8 @@ func dirCreate(in path: String, withName name: String, fileManager: FileManager)
 	do {
 		try fileManager.createDirectory(atPath: path + "/\(name)", withIntermediateDirectories: false, attributes: nil)
 		return true
-	} catch {
+	} catch let error {
+		dump(error)
 		return false
 	}
 }
@@ -41,22 +43,21 @@ func dirCreate(in path: String, withName name: String, fileManager: FileManager)
 	fileManager: FileManager */
 func sortingFiles(of array: [String]?, in path: String, with fileManager: FileManager) {
 	var errorCounter = 0
-	
+
 	for fileName in array! {
 		let file = fileName.split(separator: ".") // Separating files to name and extension
 		// Skip directories and hidden files
 		if file.count != 2 {
 			continue
-			
+
 		} else if file.count == 2 {
 			let dirName: String = file[1] + "_files"
 			let dirPath = path + "/\(dirName)"
 			let filePath = path + "/\(fileName)"
-			
+
 			if dirExistenceCheck(in: array, withName: dirName) {
 				// If dir exists -> move file
-				if movingFile(to: dirPath, file: filePath, fileManager: fileManager) {
-					print(movingFile(to: dirPath, file: filePath, fileManager: fileManager))
+				if movingFile(to: dirPath + "/\(fileName)", file: filePath, fileManager: fileManager) {
 					continue
 				} else {
 					errorCounter += 1
@@ -64,13 +65,10 @@ func sortingFiles(of array: [String]?, in path: String, with fileManager: FileMa
 				}
 			// if Dir doesn't exist -> creat dir -> move file
 			} else {
-				if dirCreate(in: path, withName: filePath, fileManager: fileManager) {
-					print(dirCreate(in: path, withName: filePath, fileManager: fileManager))
-					if movingFile(to: dirPath, file: filePath, fileManager: fileManager) {
-						print(movingFile(to: dirPath, file: filePath, fileManager: fileManager))
+				if dirCreate(in: path, withName: dirName, fileManager: fileManager) {
+					if movingFile(to: dirPath + "/\(fileName)", file: filePath, fileManager: fileManager) {
 						continue
 					} else {
-						print(movingFile(to: dirPath, file: filePath, fileManager: fileManager))
 						errorCounter += 1
 						continue
 					}
