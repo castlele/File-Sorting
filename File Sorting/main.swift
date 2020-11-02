@@ -46,7 +46,7 @@ func sortingFiles(of array: [String]?, in path: String, with fileManager: FileMa
 
 	for fileName in array! {
 		let file = fileName.split(separator: ".") // Separating files to name and extension
-		// Skip directories and hidden files
+		// Onli files in (name, extension) format should have their directories
 		if file.count != 2 {
 			continue
 
