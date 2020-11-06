@@ -1,0 +1,12 @@
+Close goals:
+    1. Make one more swift file:
+		a) wrap all funcs to a class;
+		b) make possible to choose path of sorting (where to move, how to name dirs, etc.).
+	2. Reflex on UI;
+	3. Find out how to connect API with UI;
+	4. Find out how to allow the programm run background without openning it. 
+
+Steps to achive it:
+	1. Read about classes and strucs;
+	2. Read about SwiftUI and possibility of using it on macOS;
+	3. Watch SwiftUI course.
