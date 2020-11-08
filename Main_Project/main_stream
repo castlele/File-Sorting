@@ -1,3 +1,17 @@
+Global goals:
+	1. Fansy and user-friendly design;
+	2. Choose dir, where sorting will be evaluated and evaluated to;
+	3. Choose method of sorting:
+		a) by name;
+		b) by extension;
+		c) by date.
+	4. Sorting can be evaluated whithout openning an app it self;
+	5. Can sort:
+		a) whenever file is moved to dir of sorting;
+		b) every minute, hour, week, month, year;
+		c) on a certain date (reguraly and for a one time).
+	6. Can be chosen multiple sorting paths and/or paths where to sort to.
+	
 Close goals:
     1. Make one more swift file:
 		a) wrap all funcs to a class;
