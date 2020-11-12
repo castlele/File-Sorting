@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0B6FB5255826F400B6CB5F /* SortingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0B6FB4255826F400B6CB5F /* SortingManager.swift */; };
 		7B4A13AB254EC3010042F71C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A13AA254EC3010042F71C /* main.swift */; };
+		7BAE1590255C3BAC006F206B /* DirectoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE158F255C3BAC006F206B /* DirectoryManager.swift */; };
+		7BB8F098255D941D006A4B7C /* SortingWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BB8F097255D941D006A4B7C /* SortingWay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7B0B6FB4255826F400B6CB5F /* SortingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortingManager.swift; sourceTree = "<group>"; };
 		7B4A13A7254EC3010042F71C /* File Sorting */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "File Sorting"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B4A13AA254EC3010042F71C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		7BAE158F255C3BAC006F206B /* DirectoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryManager.swift; sourceTree = "<group>"; };
+		7BB8F097255D941D006A4B7C /* SortingWay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingWay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,7 +48,6 @@
 			isa = PBXGroup;
 			children = (
 				7B4A13A9254EC3010042F71C /* File Sorting */,
-				7B4A13A8254EC3010042F71C /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,12 +57,17 @@
 				7B4A13A7254EC3010042F71C /* File Sorting */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7B4A13A9254EC3010042F71C /* File Sorting */ = {
 			isa = PBXGroup;
 			children = (
 				7B4A13AA254EC3010042F71C /* main.swift */,
+				7B0B6FB4255826F400B6CB5F /* SortingManager.swift */,
+				7BAE158F255C3BAC006F206B /* DirectoryManager.swift */,
+				7BB8F097255D941D006A4B7C /* SortingWay.swift */,
+				7B4A13A8254EC3010042F71C /* Products */,
 			);
 			path = "File Sorting";
 			sourceTree = "<group>";
@@ -119,6 +129,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAE1590255C3BAC006F206B /* DirectoryManager.swift in Sources */,
+				7B0B6FB5255826F400B6CB5F /* SortingManager.swift in Sources */,
+				7BB8F098255D941D006A4B7C /* SortingWay.swift in Sources */,
 				7B4A13AB254EC3010042F71C /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
