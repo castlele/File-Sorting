@@ -5,7 +5,7 @@ struct DirectoryManager {
 	let homePath: String
 	let fileManager = FileManager()
 	
-	var filesOfDirectory: [String]? {
+	var filesAndFoldersOfDirectory: [String]? {
 		do {
 			
 			try  fileManager.contentsOfDirectory(atPath: homePath)
@@ -15,6 +15,28 @@ struct DirectoryManager {
 			
 			return nil
 		}
+	}
+	
+	var filesOfDirectory: [String]? {
+		var arrOfFiles = [String]()
+		
+		if let folder = filesAndFoldersOfDirectory {
+			for file in folder {
+				do {
+					
+					try fileManager.contentsOfDirectory(atPath: homePath + "/\(file)")
+					continue
+					
+				} catch {
+					arrOfFiles.append(file)
+				}
+			}
+			
+		} else {
+			return nil
+		}
+		
+		return arrOfFiles
 	}
 	
 	// var namedTupleOfFiles: [(fullName: String, name: String, ext: String)]? = splitFileName()

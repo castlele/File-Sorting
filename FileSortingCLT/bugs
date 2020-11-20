@@ -1,2 +1,3 @@
-1. Need better checker of extensions
+1. Need better checker of extensions (folders with dot sorts too)
 2. Sometimes there are trubles with "for in" loop in SortingManager
+3. Need to provide better user interface and error handling
