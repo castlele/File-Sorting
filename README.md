@@ -1,5 +1,3 @@
-# README
-
 # File Sorting Assistant
 
 File Sorting is a Command-Line tool written in swift language. This program allows you to sort files into folders using Terminal.app on macOS.
