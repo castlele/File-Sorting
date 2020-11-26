@@ -2,8 +2,31 @@
 
 import Foundation
 
-let arg1 = CommandLine.arguments[1]
-let arg2 = CommandLine.arguments[2]
-let CLM = CommandLineManager(way: arg1, path: arg2)
+func main() {
+	let args = CommandLine.arguments
 
-CLM.startSoring()
+	if args.count < 3 && args[1] != "--help" {
+		print("") // ERROR
+		
+	} else if args[1] == "--help" {
+		print("") // SHOWING HELP MESSAGE
+	
+	} else if args.count == 3 {
+		CommandLineManager(way: args[1], path: args[2])
+			.startSoring()
+
+	} else if args.count > 3 {
+		let cmdLineArg = args[1]
+		let pathWays = args.suffix(from: 2)
+		
+		for pathWay in pathWays {
+			CommandLineManager(way: cmdLineArg, path: pathWay)
+				.startSoring()
+		}
+		
+	} else {
+		print() // ERROR
+	}
+}
+
+main()

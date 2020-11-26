@@ -4,11 +4,11 @@ struct SortingManager {
 	
 	let sorter: DirectoryManager
 	var sortingPath: String // Should become array of strings
-	var sortingBy: SortingWay
+	var sortingBy: CommandLineArgument
 	var namedTupleOfFiles: [(fullName: String, name: String, ext: String)]?
 	
 	// Initialization with one directory
-	init(for path: String, sortingBy: SortingWay) {
+	init(for path: String, sortingBy: CommandLineArgument) {
 		self.sorter = DirectoryManager(homePath: path)
 		self.sortingPath = sorter.homePath
 		self.sortingBy = sortingBy
@@ -44,6 +44,8 @@ struct SortingManager {
 			} else {
 				return "UNKNOWN_DATETIME"
 			}
+			case .help:
+				return "UNKNOWN"
 		}
 	}
 	

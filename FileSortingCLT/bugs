@@ -1,3 +1,12 @@
-1. Need better checker of extensions (folders with dot sorts too)
-2. Sometimes there are trubles with "for in" loop in SortingManager
-3. Need to provide better user interface and error handling
+TODO:
+1. Add error handling:
+	a) Error enumeration + rawValue;
+	b) Better Info about errors.
+	
+2. Add better user interface:
+	a) use prints while user uses the program;
+	b) add --help to SortingWay 
+
+3. Add main func to main.swift:
+	a) add user interface;
+	

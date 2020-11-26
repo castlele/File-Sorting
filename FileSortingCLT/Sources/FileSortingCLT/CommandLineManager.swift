@@ -15,7 +15,7 @@ struct CommandLineManager {
 	var arrOfRawArgs: [String] {
 		var arr = [String]()
 		
-		for way in SortingWay.allCases {
+		for way in CommandLineArgument.allCases {
 			arr.append(way.rawValue)
 		}
 		return arr
@@ -26,7 +26,7 @@ struct CommandLineManager {
 		self.sortingPathArg = arg2
 	}
 	
-	fileprivate func determineWayOfSorting() -> SortingWay? {
+	fileprivate func determineWayOfSorting() -> CommandLineArgument? {
 		
 		if arrOfRawArgs.contains(sortingWayArg) {
 			
