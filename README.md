@@ -29,5 +29,5 @@ $ sorting <option> <path> <path1> <path2> ... etc.
 -d		Sorting files by date
 -t		Sorting files by time
 -D		Sorting files by date and time
---help	  Displays user manual
+--help	     Displays user manual
 ```
