@@ -10,7 +10,7 @@ import Foundation
 enum CommandLineMessage: String {
 	case invalidAmoungOfArgs = """
 	\u{001B}[0;31mERROR:
-	You've written less than 3 arguments
+	\u{001B}[0;37mYou've written less than 3 arguments
 
 	Usage pattern:
 		$ sorting <option> <path>
@@ -21,7 +21,7 @@ enum CommandLineMessage: String {
 	
 	case invalidSortingMethod = """
 	\u{001B}[0;31mERROR:
-	You've used invalid sorting method
+	\u{001B}[0;37mYou've used invalid sorting method
 	
 	For information about available methods, use:
 		$ sorting --help
@@ -29,7 +29,7 @@ enum CommandLineMessage: String {
 	
 	case unknownError = """
 	\u{001B}[0;31mERROR:
-	Unknown error was occured!
+	\u{001B}[0;37mUnknown error was occured!
 	
 	Check if you write everything right.
 	If so, write about your problem to:
@@ -37,7 +37,7 @@ enum CommandLineMessage: String {
 	"""
 	
 	case helpMessage = """
-	OVERVIEW: A Swift Command-Line tool to sort files into folders
+	\u{001B}[0;37mOVERVIEW: A Swift Command-Line tool to sort files into folders
 	
 	USAGE: 	sorting <option> <path>
 	OR:		sorting <option> <path1> <path2> ... etc

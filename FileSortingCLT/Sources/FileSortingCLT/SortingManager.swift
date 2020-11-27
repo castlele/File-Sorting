@@ -65,30 +65,30 @@ struct SortingManager {
 						
 						// Moving file to the folder
 						if sorter.moveFile(to: folderName, fileName: fileName) {
-							print("LOG: Successfully moved the file \(fileName) to \(folderName)")
+							print("\u{001B}[0;37mLOG: Successfully moved the file \(fileName) to \(folderName)")
 							continue
 							
 						} else {
-							print("LOG: Fail of moving the file \(fileName) to \(folderName)")
+							print("\u{001B}[0;31mLOG: Fail of moving the file \(fileName) to \(folderName)")
 						}
 						
 					} else if sorter.folderExistenceCheck(forName: folderName) != nil && sorter.folderExistenceCheck(forName: folderName) == false {
 						
 						// Creating folder
 						if sorter.dirCreate(withName: folderName) {
-							print("LOG: Successfully created the directory with name: \(folderName)")
+							print("\u{001B}[0;37mLOG: Successfully created the directory with name: \(folderName)")
 							
 						} else {
-							print("LOG: Fail of creating the directory with name: \(folderName)")
+							print("\u{001B}[0;31mLOG: Fail of creating the directory with name: \(folderName)")
 						}
 						
 						// Moving file to the folder
 						if sorter.moveFile(to: folderName, fileName: fileName) {
-							print("LOG: Successfully moved the file \(fileName) to \(folderName)")
+							print("\u{001B}[0;37mLOG: Successfully moved the file \(fileName) to \(folderName)")
 							continue
 							
 						} else {
-							print("LOG: Fail of moving the file \(fileName) to \(folderName)")
+							print("\u{001B}[0;31mLOG: Fail of moving the file \(fileName) to \(folderName)")
 						}
 					}
 				}
