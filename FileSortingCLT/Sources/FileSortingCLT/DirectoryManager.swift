@@ -76,7 +76,7 @@ struct DirectoryManager {
 					} else if fullFileName.split(separator: ".").count == 1 && fullFileName.hasPrefix(".") {
 						continue
 						
-					// If file doesn't have visiable extension, it should get txt extension
+					// If file doesn't have visible extension, it should get txt extension
 					} else if fullFileName.split(separator: ".").count == 1 && !fullFileName.hasPrefix(".") {
 						array.append((fullFileName, fullFileName, "txt"))
 						
@@ -144,7 +144,7 @@ struct DirectoryManager {
 	func moveFile(to dirName: String, fileName: String) -> Bool {
 		do {
 			try self.fileManager.moveItem(atPath: self.mainPath + "/\(fileName)", toPath: self.mainPath + "/\(dirName)/\(fileName)")
-			// Returns true if file was moved successfullyу
+			// Returns true if file was moved successfully
 			return true
 			
 		} catch {

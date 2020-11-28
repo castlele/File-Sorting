@@ -1,8 +1,37 @@
-enum CommandLineArgument: String, CaseIterable {
-	case name = "-n"
-	case ext = "-e"
-	case date = "-d"
-	case time = "-t"
-	case dateTime = "-D"
-	case help = "--help"
+enum CommandLineArgument: CaseIterable {
+	case name, ext, date, time, dateTime, help
+
+	init?(argument: String) {
+		switch argument {
+			case "-n":
+				self = .name
+
+			case "-e":
+				self = .ext
+
+			case "-d":
+				self = .date
+
+			case "-t":
+				self = .time
+
+			case "-D":
+				self = .dateTime
+
+			case "--name":
+				self = .name
+
+			case "--date":
+				self = .date
+
+			case "--time":
+				self = .time
+
+			case "--help":
+				self = .help
+				
+			default:
+				return nil		
+		}
+	}
 }
