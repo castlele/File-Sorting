@@ -10,7 +10,7 @@ File Sorting is a Command-Line tool written in swift language. This program allo
 #### Using Terminal
 ```
 $ git clone https://github.com/castlele/File-Sorting.git
-$ cd File-Sorting
+$ cd File-Sorting/FileSortingCLT
 $ swift build --configuration release
 $ cp -f .build/release/sorting /usr/local/bin/sorting
 ```
