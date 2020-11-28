@@ -24,10 +24,10 @@ $ sorting <option> <path> <path1> <path2> ... etc.
 ```
 ## Available arguments
 ```
--n		Sorting files by name
--e		Sorting files by extension
--d		Sorting files by date
--t		Sorting files by time
--D		Sorting files by date and time
---help	        Displays user manual
+-n, --name		Sorting files by name
+-e			Sorting files by extension
+-d, --date		Sorting files by date
+-t, --time		Sorting files by time
+-D			Sorting files by date and time
+--help			Displays user manual
 ```
