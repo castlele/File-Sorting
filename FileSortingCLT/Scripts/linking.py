@@ -1,14 +1,16 @@
 import os
 
-
+# Read path, where the project is
 def read_file(file):
 	path_to_proj = open(file, "r")
 	path = path_to_proj.readline()
 	path_to_proj.close()
 
+	# Return the line with path from file
 	return path.split('\n')[0]
 
 
+# Delete old linking and make new
 def link_file(path_to_proj, linking_path):
 	os.chdir(path_to_proj)
 
