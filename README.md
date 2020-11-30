@@ -22,6 +22,7 @@ Also you can sort in multiple directories:
 ```
 $ sorting <option> <path> <path1> <path2> ... etc.
 ```
+![Usage example](https://media.giphy.com/media/fheCS7ohGblxaJhpAV/giphy.gif)
 ## Available arguments
 ```
 -n, --name		Sorting files by name
