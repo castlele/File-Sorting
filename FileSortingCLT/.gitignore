@@ -4,3 +4,5 @@
 /*.xcodeproj
 xcuserdata/
 /FileSortingCLT/Scripts/pathToProj.txt
+/Scripts/currentRelease.txt
+/Scripts/geckodriver.log

@@ -1,3 +1,4 @@
+#! /usr/bin python3			
 import os
 
 # Read path, where the project is
@@ -26,5 +27,5 @@ def link_file(path_to_proj, linking_path):
 
 if __name__ == '__main__':
 	path = read_file("pathToProj.txt")
-	linking_path = "/usr/local/bin/sorting"
+	linking_path = "/usr/local/bin/sorting/"
 	link_file(path, linking_path)
