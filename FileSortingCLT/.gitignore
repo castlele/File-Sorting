@@ -6,3 +6,6 @@ xcuserdata/
 /FileSortingCLT/Scripts/pathToProj.txt
 /Scripts/currentRelease.txt
 /Scripts/geckodriver.log
+pathToProj.txt
+geckodriver.log
+currentRelease.txt
